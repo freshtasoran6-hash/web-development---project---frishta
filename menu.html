@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Sweet Strawberry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sweet Strawberry</h1>
+        <p>Baking happiness every day!</p>
+        <button id="mode-toggle" title="Toggle Theme"></button>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sweet Biography</a></li>
+            <li><a href="menu.html">Menu & Order</a></li>
+            <li><a href="socials.html">Socials</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="menu">
+            <h2>Our Sweet Menu / لیستی شیرینیەکانمان</h2>
+            <div class="menu-grid">
+                <article>
+                    <h3>Classic Caramel Flan <br><span class="kurdish">فلانی کارامێل</span></h3>
+                    <img src="images/flan.jpg" alt="A delicious caramel flan">
+                    <p>6,000 IQD</p>
+                </article>
+                <article>
+                    <h3>Big Honey Pancakes <br><span class="kurdish">پانکەیکی هەنگوین</span></h3>
+                    <img src="images/honey-pancakes.jpg" alt="Fluffy pancakes with honey">
+                    <p>8,000 IQD</p>
+                </article>
+                <article>
+                    <h3>Mini Nutella Pancakes <br><span class="kurdish">پانکەیکی نۆتێلا</span></h3>
+                    <img src="images/nutella-pancakes.jpg" alt="Mini pancakes with Nutella">
+                    <p>9,500 IQD</p>
+                </article>
+                <article>
+                    <h3>Strawberry Cupcake <br><span class="kurdish">کەپ کێکی شلیک</span></h3>
+                    <img src="images/cupcake.jpg" alt="Strawberry cupcake">
+                    <p>4,500 IQD</p>
+                </article>
+                <article>
+                    <h3>Chocolate Lava Cake <br><span class="kurdish">کێکی شوکولاتە</span></h3>
+                    <img src="images/lava-cake.jpg" alt="Chocolate lava cake">
+                    <p>10,500 IQD</p>
+                </article>
+                <article>
+                    <h3>French Macarons <br><span class="kurdish">ماکارۆنی فەڕەنسی</span></h3>
+                    <img src="images/macarons.jpg" alt="Colorful macarons">
+                    <p>7,500 IQD</p>
+                </article>
+            </div>
+        </section>
+        
+        <hr>
+        
+        <section id="contact">
+            <h2>Place an Order</h2>
+            <form id="contact-form">
+                <label for="name">Your Name / ناوت</label>
+                <input type="text" id="name" required>
+                <label for="message">What would you like to order? / داواکاریەکەت چییە؟</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Order</button>
+            </form>
+            <p id="confirmation"></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Sweet Strawberry Bakery</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

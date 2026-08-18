@@ -1,0 +1,243 @@
+/* Default Pink Theme */
+:root {
+    --bg-color: #FFD1DC; 
+    --color-primary: #FF69B4; 
+    --color-secondary: #FFF0F5; 
+    --text-color: #333333;
+}
+
+/* The Yellow Toggle Override */
+body.yellow-mode {
+    --bg-color: #FFFACD; 
+    --color-primary: #FFA500; 
+    --color-secondary: #FFFFE0; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    line-height: 1.5;
+    transition: background-color 0.3s ease; 
+}
+
+/* Header */
+header {
+    position: relative;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 24px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* The Half-Pink / Half-Yellow Toggle Button */
+#mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: linear-gradient(90deg, #FF69B4 50%, #FFD700 50%);
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    display: flex; 
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 16px;
+    background-color: var(--color-secondary);
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-grid article {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid var(--color-secondary);
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Kurdish Text Styling */
+.kurdish {
+    font-size: 0.9em;
+    color: #666;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Forms */
+#contact-form, #visitor-form {
+    display: flex; 
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact-form input, #contact-form textarea, 
+#visitor-form input {
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+#contact-form button, #visitor-form button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Socials Page Styles */
+.socials-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--color-primary);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 300px;
+    margin: 24px auto 0;
+}
+
+.social-btn {
+    background-color: var(--color-secondary);
+    color: var(--text-color);
+    padding: 16px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: var(--color-secondary);
+    font-size: 0.9em;
+}
+
+/* Home Page Background Image */
+.home-page {
+    background-image: url('images/bakery-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home-content {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-box {
+    background-color: rgba(255, 240, 245, 0.95); 
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    border: 3px solid var(--color-primary);
+}
+
+#visitor-greeting, #confirmation {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-grid article {
+        width: 100%;
+    }
+}/* Biography Side-by-Side Layout */
+.bio-content {
+    display: flex; /* This places the image and text side-by-side */
+    gap: 20px; /* Creates space between the picture and the words */
+    align-items: flex-start; /* Aligns the text to the top of the image */
+    margin-top: 15px;
+}
+
+.bio-content img {
+    width: 250px; /* Locks the image size so it isn't too huge */
+    flex-shrink: 0; /* Prevents the text from squishing the image */
+    margin: 0; /* Removes the default margin we set earlier */
+}
+
+/* On small phone screens, stack them normally again so they fit */
+@media (max-width: 600px) {
+    .bio-content {
+        flex-direction: column;
+    }
+}
